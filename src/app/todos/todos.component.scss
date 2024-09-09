@@ -1,0 +1,267 @@
+/* Basic styling for the TodoList page */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-top: 20px;
+}
+
+.todo-class {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.todo-class form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.todo-class input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+.todo-class button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.todo-class button:hover {
+  background-color: #0056b3;
+}
+
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.todo-list div {
+  background: #fff;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+  width: 80%;
+  text-align: center;
+}
+
+.todolist {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+/* Container for the todo-list */
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* Individual todo item styling */
+.todo-list div {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+  width: 300px; /* Fixed width to align buttons properly */
+  display: flex;
+  justify-content: space-between; /* Align text and buttons */
+  align-items: center; /* Vertically align text and buttons */
+}
+
+/* Edit button styling */
+.todo-list .edit {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.todo-list .edit:hover {
+  background-color: #45a049;
+}
+
+/* Delete button styling */
+.todo-list .delete {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.todo-list .edit {
+  background-color: blue;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.todo-list .delete:hover {
+  background-color: #e53935;
+}
+
+/* Align buttons in a horizontal row */
+.button-container {
+  display: flex;
+  gap: 10px; /* Adds spacing between buttons */
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 400px) {
+  .todo-list div {
+    width: 100%;
+  }
+}
+
+/* Container for the todo-list */
+.todo-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  /* Individual todo item styling */
+  .todo-item {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    width: 350px; /* Adjust width for a balanced layout */
+    display: flex;
+    justify-content: space-between; /* Align content and buttons */
+    align-items: center; /* Vertically center everything */
+  }
+  
+  /* Todo content styling */
+  .todo-content {
+    flex: 1; /* Take up available space */
+    text-align: left;
+    padding-right: 20px; /* Space between content and buttons */
+  }
+  
+  /* Edit button styling */
+  .edit {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-right: 5px;
+  }
+  
+  .edit:hover {
+    background-color: #45a049;
+  }
+  
+  /* Delete button styling */
+  .delete {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .delete:hover {
+    background-color: #e53935;
+  }
+  
+  /* Align buttons in a horizontal row */
+  .button-container {
+    display: flex;
+    gap: 10px;
+  }
+  .todo.done .content {
+    text-decoration: line-through !important;
+  }
+  .todo-class {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.todo-table {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.todo-table th,
+.todo-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.todo-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+.todo-table tr.done td {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.todo-table .delete {
+    background-color: #f44336;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.todo-table .delete:hover {
+    background-color: #d32f2f;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.todo-content {
+    cursor: pointer;
+}

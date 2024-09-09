@@ -1,0 +1,48 @@
+<!-- <h1>TodoList</h1>
+<div class="todo-class">
+    <form>
+        <input type="text" placeholder="Enter todo" name="todo" class="todo" [(ngModel)]="inputTodo">
+        <br>
+        <button type="submit" (click)="addTodo()">Submit TodoList</button>
+    </form>
+</div>
+
+<div class="todo-list">
+    <div *ngFor="let items of todoList ; let i = index" class="todo{{(items.completed ?'done' : '')}}">
+        <div *ngIf="todoList.length>0" class="button-container">
+            <span>{{i}}</span>
+            <span class="todo-content" (click)="toogleDone(i)">{{items.content}}</span>
+            <button class="delete" (click)="onDelete(items.id)">Delete</button>
+        </div>
+    </div>
+</div> -->
+<h1>TodoList</h1>
+<div class="todo-class">
+    <form>
+        <input type="text" placeholder="Enter todo" name="todo" class="todo" [(ngModel)]="inputTodo">
+        <br>
+        <button type="submit" (click)="addTodo()">Create TodoList</button>
+    </form>
+</div>
+
+<div class="todo-list">
+    <table *ngIf="todoList.length >1" class="todo-table">
+        <thead>
+            <tr>
+                <th>S.No</th>
+                <th>Todo</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let items of todoList; let i = index" [class.done]="items.completed">
+                <td>{{ i + 1 }}</td> <!-- Row index starts from 1 -->
+                <td  (click)="toogleDone(i)">{{ items.content }}</td>
+                <td >{{ items.completed == true ? "Completed" : 'Pending' }}</td>
+                <td>
+                    <button class="delete" (click)="onDelete(items.id)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
